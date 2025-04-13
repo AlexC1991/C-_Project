@@ -1,0 +1,3 @@
+C:/Users/batty/Desktop/cmake-build-debug/CMakeFiles/OpenGLCube.dir
+C:/Users/batty/Desktop/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/batty/Desktop/cmake-build-debug/CMakeFiles/rebuild_cache.dir
