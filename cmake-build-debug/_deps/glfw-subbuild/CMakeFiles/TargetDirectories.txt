@@ -1,0 +1,3 @@
+C:/Users/batty/Desktop/C++_Project/cmake-build-debug/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir
+C:/Users/batty/Desktop/C++_Project/cmake-build-debug/_deps/glfw-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/batty/Desktop/C++_Project/cmake-build-debug/_deps/glfw-subbuild/CMakeFiles/rebuild_cache.dir

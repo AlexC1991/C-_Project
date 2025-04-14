@@ -1,62 +1,98 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include "Shader.h"
-#include "Camera.h"
-#include "Mesh.h"
+#include <Camera.h>
 #include <glm/glm.hpp>
-#include "Textures.h"
-#pragma once
+#include <glm/gtc/matrix_transform.hpp>
+#include <vector>
+#include <string>
+#include <memory> // For unique_ptr
 
-void checkGLError(const char* operation);
+// Forward declarations
+struct GLFWwindow;
+class Camera;
+// class Shader; // << FORWARD DECLARE Shader instead of including Shader.h
+class Texture;
+class Mesh;
+struct ImGuiContext;
+class btRigidBody;
+class btDiscreteDynamicsWorld;
+
+// --- FORWARD DECLARE Shader ---
+class Shader;
+// ---
 
 class Renderer {
 public:
-    // Constructor
     Renderer(int width, int height, const char* title);
+    ~Renderer(); // << Ensure Destructor is DECLARED here
 
-    // Destructor
-    ~Renderer();
-
-    // Initialize renderer
     bool Initialize();
-
-    // Main render loop
-    void RenderLoop();
-
-    // Process input
     void ProcessInput();
+    void Update(float dt);
+    void Render(btDiscreteDynamicsWorld* dynamicsWorld);
 
-    // Get window
-    GLFWwindow* GetWindow() const { return window; }
-
-    // Callback setup
-    static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-    static void mouse_callback(GLFWwindow* window, double xpos, double ypos);
-    static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+    // Getters
+    GLFWwindow* getWindow() const { return window; }
+    float getDeltaTime() const { return deltaTime; }
+    bool isPaused = false; // Public for main loop check
 
 private:
-    // Window properties
+    // Window
+    GLFWwindow* window;
     int width, height;
     const char* title;
-    GLFWwindow* window;
-    int frameCount;
+
+    // Timing
+    float deltaTime;
+    float lastFrame;
+    unsigned long long frameCount;
+    double fps;
+    double fpsUpdateTime;
+
     // Camera
     Camera camera;
     float lastX, lastY;
     bool firstMouse;
 
-    // Timing
-    float deltaTime;
-    float lastFrame;
+    // Rendering State
+    glm::mat4 lastModelMatrix;
 
-    Texture* texture = nullptr;
-    bool textureLoaded = false;
+    // Raymarching specific
+    unsigned int quadVAO;
+    unsigned int quadVBO;
 
-    // Create cube mesh
+    // Texture
+    Texture* texture;
+    bool textureLoaded;
+    bool needToRebindTexture;
+
+    // Physics Rendering
+    // Use unique_ptr with forward-declared Shader
+    std::unique_ptr<Shader> m_rasterShader; // << This requires ~Renderer() definition in .cpp
+    unsigned int m_cubeVAO;
+    unsigned int m_cubeVBO;
+    unsigned int m_cubeEBO;
+    size_t m_cubeIndexCount;
+
+    // Initialization Helpers
+    void InitImGui();
+    void ShutdownImGui();
+    bool LoadTextureFromDirectories();
+    void setupScreenQuad();
+    void setupRasterShader();
+    void setupPhysicsMeshes();
+
+    // Rendering Helpers
+    void RenderUI();
+    void renderPhysicsObjects(btDiscreteDynamicsWorld* world, const glm::mat4& view, const glm::mat4& projection);
+    glm::mat4 convertBtTransformToGlm(const class btTransform& trans);
     Mesh CreateCube();
+
+    // Callbacks (static)
+    static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+    static void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+    static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 };
 
-#endif
+#endif // RENDERER_H

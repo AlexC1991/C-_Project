@@ -1,39 +1,55 @@
 #pragma once
+#ifndef TEXTURES_H
+#define TEXTURES_H
+
 #include <GL/glew.h>
 #include <string>
+#include <unordered_map>
+#include <iostream>
+#include <filesystem>
 
 class Texture {
 public:
-    Texture(const char* path);
+    // Constructor with option to disable caching
+    Texture(const char* path, bool useCache = true);
     ~Texture();
 
-    void Bind(unsigned int slot = 0) const;
+    void Bind(unsigned int slot) const;
     void Unbind() const;
 
-    unsigned int GetID() const;
-    bool IsValid() const;
-    bool IsCurrentlyBound() const { return isBound; }
-    const std::string& GetPath() const { return texturePath; }
-    static unsigned int totalBindCalls;
-    // Debug methods
-    static void EnableDebug(bool enable = true);
-    static bool IsDebugEnabled();
+    // Add reload method
+    bool Reload(const char* path);
+
+    // Static methods for debugging
+    static void EnableDebug(bool enable);
     static void PrintBindStats();
 
+    // Static method to clear texture cache
+    static void ClearCache();
+
+    // Static method to force reload all textures
+    static void ForceReloadAll();
+
+    // Static variables for tracking
+    static int totalBindCalls;
+    static int activeBindings;
+    unsigned int ID;
+    // Static texture cache
+    static std::unordered_map<std::string, unsigned int> textureCache;
+
+    // Static timestamp cache for file modification tracking
+    static std::unordered_map<std::string, std::filesystem::file_time_type> textureTimestamps;
+
 private:
-    unsigned int ID = 0;
+
     std::string texturePath;
+    mutable bool isBound;
+    mutable unsigned int lastBoundSlot;
 
-    // Binding state tracking
-    mutable bool isBound = false;
-    mutable unsigned int lastBoundSlot = 0;
-
-    // Static tracking for all textures
-    static unsigned int activeBindings;
     static bool debugEnabled;
 
-    // Helper methods
-    bool LoadFromFile(const char* path);
-    void CreateDefaultTexture();
-    static void ResetBindStats();
+    // Helper method to load texture data
+    bool LoadTextureData(const char* path, bool addToCache);
 };
+
+#endif // TEXTURES_H
