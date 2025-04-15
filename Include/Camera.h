@@ -31,6 +31,7 @@ public:
     float MovementSpeed;
     float MouseSensitivity;
     float Zoom;
+    int Process;
 
     // Constructor with vectors
     Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f),
@@ -52,9 +53,12 @@ public:
     // Processes input received from a mouse scroll-wheel event
     void ProcessMouseScroll(float yoffset);
 
-private:
     // Calculates the front vector from the Camera's (updated) Euler Angles
     void updateCameraVectors();
+
+private:
+
+
 };
 
 // Define camera movement directions

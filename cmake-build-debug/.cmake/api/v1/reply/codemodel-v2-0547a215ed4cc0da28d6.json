@@ -1,0 +1,653 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						5,
+						6,
+						19
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						11,
+						15
+					]
+				},
+				{
+					"build" : "_deps/glfw-build",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.glfw-build-Debug-a5d290122b7b5bc6e166.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "cmake-build-debug/_deps/glfw-src",
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"build" : "_deps/glfw-build/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.glfw-build.src-Debug-31cd5302c1e2be0cffec.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "cmake-build-debug/_deps/glfw-src/src",
+					"targetIndexes" : 
+					[
+						13,
+						18
+					]
+				},
+				{
+					"build" : "_deps/glm-build",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-_deps.glm-build-Debug-f102e2b64d561f2d5d99.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "cmake-build-debug/_deps/glm-src"
+				},
+				{
+					"build" : "_deps/glm-build/glm",
+					"jsonFile" : "directory-_deps.glm-build.glm-Debug-aca91daba61ef8a137d4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "cmake-build-debug/_deps/glm-src/glm",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "_deps/glew-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.glew-build-Debug-a3d28a15862f87d4c3e6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "cmake-build-debug/_deps/glew-src",
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build",
+					"childIndexes" : 
+					[
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.bullet3-build-Debug-3bc4a163e3f5bc2f603d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src"
+				},
+				{
+					"build" : "_deps/bullet3-build/src",
+					"childIndexes" : 
+					[
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					],
+					"jsonFile" : "directory-_deps.bullet3-build.src-Debug-9728ea432dcb6ea06205.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src"
+				},
+				{
+					"build" : "_deps/bullet3-build/src/Bullet3OpenCL",
+					"jsonFile" : "directory-_deps.bullet3-build.src.Bullet3OpenCL-Debug-4d6d587d8b76e4f0e458.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/Bullet3OpenCL",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/Bullet3Serialize/Bullet2FileLoader",
+					"jsonFile" : "directory-_deps.bullet3-build.src.Bullet3Serialize.Bullet2FileLoader-Debug-affefbda673fd90da308.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/Bullet3Serialize/Bullet2FileLoader",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/Bullet3Dynamics",
+					"jsonFile" : "directory-_deps.bullet3-build.src.Bullet3Dynamics-Debug-2676b45e4d6ce30e02a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/Bullet3Dynamics",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/Bullet3Collision",
+					"jsonFile" : "directory-_deps.bullet3-build.src.Bullet3Collision-Debug-bc2ac40c7067a33bc1bc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/Bullet3Collision",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/Bullet3Geometry",
+					"jsonFile" : "directory-_deps.bullet3-build.src.Bullet3Geometry-Debug-440bdb10da3ec9b20576.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/Bullet3Geometry",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/BulletInverseDynamics",
+					"jsonFile" : "directory-_deps.bullet3-build.src.BulletInverseDynamics-Debug-fbfecf251311f34b7902.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/BulletInverseDynamics",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/BulletSoftBody",
+					"jsonFile" : "directory-_deps.bullet3-build.src.BulletSoftBody-Debug-4b7210f0b8b17c9865c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/BulletSoftBody",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/BulletCollision",
+					"jsonFile" : "directory-_deps.bullet3-build.src.BulletCollision-Debug-3fc0158e607269ad75a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/BulletCollision",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/BulletDynamics",
+					"jsonFile" : "directory-_deps.bullet3-build.src.BulletDynamics-Debug-9c21c3876de2d2c27784.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/BulletDynamics",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/LinearMath",
+					"jsonFile" : "directory-_deps.bullet3-build.src.LinearMath-Debug-fe98011b26abc43fd252.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/LinearMath",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "_deps/bullet3-build/src/Bullet3Common",
+					"jsonFile" : "directory-_deps.bullet3-build.src.Bullet3Common-Debug-71a7e05a340a505b7e8b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.3"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 4,
+					"source" : "cmake-build-debug/_deps/bullet3-src/src/Bullet3Common",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "_deps/assimp-build",
+					"childIndexes" : 
+					[
+						20,
+						21
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.assimp-build-Debug-4a05f3163acd1e94f89d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "cmake-build-debug/_deps/assimp-src"
+				},
+				{
+					"build" : "_deps/assimp-build/contrib/zlib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.assimp-build.contrib.zlib-Debug-1d9dca8a60453b43f1c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 19,
+					"projectIndex" : 6,
+					"source" : "cmake-build-debug/_deps/assimp-src/contrib/zlib",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "_deps/assimp-build/code",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.assimp-build.code-Debug-1ca607b8f8906063b076.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 19,
+					"projectIndex" : 5,
+					"source" : "cmake-build-debug/_deps/assimp-src/code",
+					"targetIndexes" : 
+					[
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "OpenGLCube",
+					"targetIndexes" : 
+					[
+						11,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						13,
+						17,
+						18
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "glm",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "glew",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					],
+					"name" : "BULLET_PHYSICS",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						6
+					],
+					"directoryIndexes" : 
+					[
+						19,
+						21
+					],
+					"name" : "Assimp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						20
+					],
+					"name" : "zlib",
+					"parentIndex" : 5,
+					"targetIndexes" : 
+					[
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 9,
+					"id" : "Bullet2FileLoader::@d3e17e39cee2d5f002b7",
+					"jsonFile" : "target-Bullet2FileLoader-Debug-5c721028f59267809b14.json",
+					"name" : "Bullet2FileLoader",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "Bullet3Collision::@decc38f8211d406e5ef4",
+					"jsonFile" : "target-Bullet3Collision-Debug-738153f1bb7a6c497356.json",
+					"name" : "Bullet3Collision",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "Bullet3Common::@eb134b1a4c3e0aa93e49",
+					"jsonFile" : "target-Bullet3Common-Debug-41225f24b314045dc765.json",
+					"name" : "Bullet3Common",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "Bullet3Dynamics::@58010506c3ecd99c8996",
+					"jsonFile" : "target-Bullet3Dynamics-Debug-2639add0e94441ca43a1.json",
+					"name" : "Bullet3Dynamics",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "Bullet3Geometry::@12f5f6d132ed87014b97",
+					"jsonFile" : "target-Bullet3Geometry-Debug-c8298ef657342abc62c6.json",
+					"name" : "Bullet3Geometry",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "Bullet3OpenCL_clew::@108e89ef38f5e9646320",
+					"jsonFile" : "target-Bullet3OpenCL_clew-Debug-a95db6121fa8f8400fdc.json",
+					"name" : "Bullet3OpenCL_clew",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "BulletCollision::@49ae2197a500ca53ebe5",
+					"jsonFile" : "target-BulletCollision-Debug-19a4f38dcbd853a7a32e.json",
+					"name" : "BulletCollision",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "BulletDynamics::@455b65d09a9fa0c46448",
+					"jsonFile" : "target-BulletDynamics-Debug-ded88f34fd5d4b6d0340.json",
+					"name" : "BulletDynamics",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "BulletInverseDynamics::@2e621777a95594d3bf83",
+					"jsonFile" : "target-BulletInverseDynamics-Debug-165e644aaa9059107995.json",
+					"name" : "BulletInverseDynamics",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "BulletSoftBody::@7615a0726a47424a7d43",
+					"jsonFile" : "target-BulletSoftBody-Debug-4afa1cf0135fd8ce0e9c.json",
+					"name" : "BulletSoftBody",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "LinearMath::@6ecdb779133703112c3c",
+					"jsonFile" : "target-LinearMath-Debug-232e157945c51ac207a5.json",
+					"name" : "LinearMath",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenGLCube::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGLCube-Debug-d80ea62e8c5b4c59d03b.json",
+					"name" : "OpenGLCube",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "assimp::@b1ea6f5c2178ebc90389",
+					"jsonFile" : "target-assimp-Debug-0e2970fbfac5576151de.json",
+					"name" : "assimp",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw::@fa9f4482d3a2b070f206",
+					"jsonFile" : "target-glfw-Debug-d4f7bab0dc6e0f4cbdce.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glm::@ce54d98d7b326a3e12a8",
+					"jsonFile" : "target-glm-Debug-3648fe38366877d6e840.json",
+					"name" : "glm",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "imgui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-imgui-Debug-b851bb9288a90b9f1cf2.json",
+					"name" : "imgui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "libglew_static::@9e054d6cbd4da82212b4",
+					"jsonFile" : "target-libglew_static-Debug-8c41cdbbc692a229d817.json",
+					"name" : "libglew_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@369fad943889a5ec39c8",
+					"jsonFile" : "target-uninstall-Debug-f8ea1dd1ef75acb92481.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "update_mappings::@fa9f4482d3a2b070f206",
+					"jsonFile" : "target-update_mappings-Debug-a2c0f319197950417f26.json",
+					"name" : "update_mappings",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "zlibstatic::@7fd99959cf8fe87d223a",
+					"jsonFile" : "target-zlibstatic-Debug-62da0af9450c7e9966f1.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 6
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/batty/Desktop/C++_Project/cmake-build-debug",
+		"source" : "C:/Users/batty/Desktop/C++_Project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

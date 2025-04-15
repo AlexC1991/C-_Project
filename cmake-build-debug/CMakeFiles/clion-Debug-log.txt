@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.1.4/bin/ninja/win/x64/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=C:/Windows/System32/vcpkg/scripts/buildsystems/vcpkg.cmake -G Ninja -S C:\Users\batty\Desktop\C++_Project -B C:\Users\batty\Desktop\C++_Project\cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.1.4/bin/ninja/win/x64/ninja.exe" -G Ninja -DCMAKE_TOOLCHAIN_FILE=C:\Users\batty\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake -S C:\Users\batty\Desktop\C++_Project -B C:\Users\batty\Desktop\C++_Project\cmake-build-debug
 -- The C compiler identification is GNU 13.1.0
 -- The CXX compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
@@ -21,9 +21,11 @@
 -- Looking for dinput.h - found
 -- Looking for xinput.h
 -- Looking for xinput.h - found
+-- GLFW configured successfully.
 -- Downloading and configuring GLM...
 -- GLM: Version 1.0.1
 -- GLM: Build with C++ features auto detection
+-- GLM configured successfully (header only).
 -- Downloading and configuring GLEW...
 CMake Deprecation Warning at cmake-build-debug/_deps/glew-src/CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
@@ -33,7 +35,9 @@ CMake Deprecation Warning at cmake-build-debug/_deps/glew-src/CMakeLists.txt:1 (
   CMake that the project does not need compatibility with older versions.
 
 
+-- GLEW configured successfully (target 'libglew_static').
 -- Downloading and configuring ImGui...
+-- ImGui source configured successfully.
 -- Downloading and configuring Bullet Physics...
 CMake Deprecation Warning at cmake-build-debug/_deps/bullet3-src/CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
@@ -45,6 +49,42 @@ CMake Deprecation Warning at cmake-build-debug/_deps/bullet3-src/CMakeLists.txt:
 
 OPENGL FOUND
 opengl32glu32
--- Configuring done (7.5s)
--- Generating done (0.1s)
+-- Bullet Physics configured successfully.
+-- Downloading and configuring Assimp...
+-- Shared libraries disabled
+-- compiling zlib from sources
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of off64_t
+-- Check size of off64_t - done
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Applying MinGW StepFileGen1.cpp Debug Workaround
+-- VRML disabled
+-- tinyusdz disabled
+-- Enabled importer formats: AMF 3DS AC ASE ASSBIN B3D BVH COLLADA DXF CSM HMP IRRMESH IQM IRR LWO LWS MD2 MD3 MD5 MDC MDL NFF NDO OFF OBJ OGRE OPENGEX PLY MS3D COB BLEND IFC XGL FBX Q3D Q3BSP RAW SIB SMD STL TERRAGEN 3D X X3D GLTF 3MF MMD
+-- Disabled importer formats: USD
+-- Enabled exporter formats: OBJ OPENGEX PLY 3DS ASSBIN ASSXML COLLADA FBX STL X X3D GLTF 3MF PBRT ASSJSON STEP
+-- Disabled exporter formats:
+-- Treating all warnings as errors (for assimp library only)
+-- Assimp configured successfully.
+-- Downloading and configuring tinyfiledialogs...
+-- Tiny File Dialogs configured.
+-- Custom ImGui static library target created.
+-- Found source files: C:/Users/batty/Desktop/C++_Project/src/Camera.cpp;C:/Users/batty/Desktop/C++_Project/src/Mesh.cpp;C:/Users/batty/Desktop/C++_Project/src/Renderer.cpp;C:/Users/batty/Desktop/C++_Project/src/Shader.cpp;C:/Users/batty/Desktop/C++_Project/src/Textures.cpp;C:/Users/batty/Desktop/C++_Project/src/main.cpp;C:/Users/batty/Desktop/C++_Project/src/stb_image.cpp
+-- Include directories set for OpenGLCube.
+-- Linking Windows libraries for tinyfiledialogs.
+-- Libraries linked for OpenGLCube.
+-- Setting up asset copying...
+-- Texture copying configured.
+-- Shader copying configured.
+-- CMake configuration finished.
+-- Configuring done (13.6s)
+-- Generating done (0.3s)
 -- Build files have been written to: C:/Users/batty/Desktop/C++_Project/cmake-build-debug
